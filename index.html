@@ -5,118 +5,149 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Ride N Drive Transportation | Non-Emergency Medical Transport</title>
-<meta name="description" content="Ride N Drive Transportation proudly serves the greater Phoenix, Arizona region with safe, reliable non-emergency medical transportation." />
+<meta name="description" content="Ride N Drive Transportation proudly serves communities across the greater Phoenix, Arizona region, providing safe and reliable non-emergency medical transportation including wheelchair, stretcher, and ambulatory services." />
 <meta name="theme-color" content="#2f5f3e" />
 
 <style>
-html { scroll-behavior:smooth; }
+/* ===== GLOBAL ===== */
+html { scroll-behavior: smooth; }
 body {
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  color:#1f2933;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2933;
+  line-height: 1.6;
   background:
-    linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,.95)),
+    linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
     url("images/logo.jpg") center / cover no-repeat fixed;
+  background-blend-mode: lighten;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
-  background:#2f5f3e;
-  color:#fff;
-  padding:56px 24px;
-  text-align:center;
+  background: #2f5f3e;
+  color: #ffffff;
+  padding: 56px 24px;
+  text-align: center;
 }
+header h1 { margin: 0 0 10px; }
+header p { margin: 0 0 20px; }
+
+/* ===== HERO ACTIONS ===== */
 .hero-actions a {
-  display:inline-block;
-  margin:12px;
-  padding:14px 34px;
-  border-radius:999px;
-  background:#fff;
-  color:#2f5f3e;
-  font-weight:bold;
-  text-decoration:none;
+  display: inline-block;
+  margin: 12px;
+  padding: 14px 34px;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #ffffff;
+  color: #2f5f3e;
+  transition: transform 0.3s, background 0.3s, color 0.3s;
 }
-.hero-actions a:hover { background:#1f4930;color:#fff }
+.hero-actions a:hover {
+  background: #1f4930;
+  color: #ffffff;
+  transform: scale(1.05);
+}
 
-/* SECTIONS */
-section { padding:56px 24px; max-width:1100px; margin:auto }
-h2,h3 { text-align:center }
-h3 { color:#2f5f3e }
+/* ===== SECTIONS ===== */
+section {
+  padding: 56px 24px;
+  max-width: 1100px;
+  margin: auto;
+}
+h2 { text-align: center; margin-bottom: 24px; }
+h3 { text-align: center; color: #2f5f3e; margin-top: 24px; }
 
-/* CARDS */
+/* ===== GRIDS ===== */
 .services {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  justify-content: center;
 }
-.card {
-  background:#fff;
-  border-radius:18px;
-  padding:32px;
-  text-align:center;
-  box-shadow:0 8px 24px rgba(0,0,0,.15);
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 26px;
 }
-.icon img { width:80px }
 
-/* BOOKING */
-.booking-card { grid-column:span 2 }
-form {
-  display:flex;
-  flex-direction:column;
-  gap:12px;
+/* ===== CARDS ===== */
+.card, .values li {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-input,select,textarea {
-  padding:14px;
-  border-radius:8px;
-  border:1px solid #ccc;
-  font-size:1rem;
+.card.booking-card { max-width: 500px; margin: auto; }
+
+/* ===== ICONS ===== */
+.icon img { width: 80px; margin-bottom: 20px; }
+
+/* ===== BUTTON ===== */
+.book-now {
+  display: inline-block;
+  margin-top: 20px;
+  background: #ff7f50;
+  color: #ffffff;
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.book-now:hover { background: #e06640; }
+
+/* ===== FORM ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .form-row {
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-.book-now {
-  background:#ff7f50;
-  color:#fff;
-  padding:14px;
-  border-radius:999px;
-  border:none;
-  font-weight:bold;
-  cursor:pointer;
+input, select, textarea {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 }
-.book-now:hover { background:#e06640 }
 
-/* THANK YOU */
-.thank-you {
-  background:#f9fafb;
-  text-align:center;
-  padding:80px 24px;
-}
-.thank-you-box {
-  background:#fff;
-  max-width:520px;
-  margin:auto;
-  padding:48px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-.thank-you h2 { color:#2f5f3e }
-
-/* MAP */
+/* ===== MAP ===== */
 .map-container {
-  max-width:900px;
-  margin:30px auto;
-  border-radius:18px;
-  overflow:hidden;
-  aspect-ratio:16/9;
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
-/* FOOTER */
+/* ===== THANK YOU ===== */
+#thank-you {
+  background: #f9fafb;
+  text-align: center;
+}
+#thank-you .box {
+  background: #ffffff;
+  max-width: 520px;
+  margin: auto;
+  padding: 48px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== FOOTER ===== */
 footer {
-  background:#f3f4f6;
-  padding:40px;
-  text-align:center;
+  background: #f3f4f6;
+  padding: 40px 24px;
+  text-align: center;
 }
 </style>
 </head>
@@ -134,35 +165,39 @@ footer {
 
 <section>
   <h2>About Us</h2>
-  <p style="text-align:center">
-    We provide safe, reliable, and compassionate non-emergency medical transportation
-    throughout the greater Phoenix area.
+  <p style="text-align:center;">
+    At Ride N Drive Transportation, we are a reliable non-emergency medical transportation service (NEMT).
   </p>
 
-  <h3>Compassion</h3>
-  <p style="text-align:center">
-    We acknowledge the specific needs and aspirations of each individual we serve,
-    and our team is devoted to providing compassionate care that supports both
-    physical and emotional needs on and off the road.
-  </p>
+  <h3>Our Core Values</h3>
+  <ul class="values">
+    <li><strong>Safety</strong><br>Passenger well-being always comes first.</li>
+    <li><strong>Compassion</strong><br>
+      We acknowledge the specific needs and aspirations of each individual we serve,
+      providing compassionate care that supports physical and emotional needs on and off the road.
+    </li>
+    <li><strong>Reliability</strong><br>On-time service you can trust.</li>
+    <li><strong>Professionalism</strong><br>Trained, courteous staff.</li>
+    <li><strong>Accessibility</strong><br>Vehicles equipped for all needs.</li>
+  </ul>
 </section>
 
 <section class="services">
 
   <div class="card">
-    <div class="icon"><img src="images/wheelchair.png" alt=""></div>
+    <div class="icon"><img src="images/wheelchair.png"></div>
     <h3>Wheelchair Transport</h3>
     <p>Safe and secure wheelchair transportation.</p>
   </div>
 
   <div class="card">
-    <div class="icon"><img src="images/ambulatory.png" alt=""></div>
+    <div class="icon"><img src="images/ambulatory.png"></div>
     <h3>Ambulatory Transport</h3>
-    <p>Reliable transport for ambulatory clients.</p>
+    <p>Reliable transportation for ambulatory clients.</p>
   </div>
 
   <div class="card">
-    <div class="icon"><img src="images/stretcher.png" alt=""></div>
+    <div class="icon"><img src="images/stretcher.png"></div>
     <h3>Stretcher Transport</h3>
     <p>Professional stretcher transport.</p>
   </div>
@@ -170,11 +205,8 @@ footer {
   <!-- ONLINE BOOKING -->
   <div class="card booking-card" id="online-booking">
     <h3>Online Booking</h3>
-    <p><strong>Please complete the form below. We will confirm your ride shortly.</strong></p>
 
     <form action="https://formsubmit.co/info@ridendrive.org" method="POST">
-
-      <!-- REQUIRED -->
       <input type="hidden" name="_next" value="https://ridendrive.org/#thank-you">
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="_honey" style="display:none">
@@ -185,7 +217,7 @@ footer {
 
       <div class="form-row">
         <select name="service_type" required>
-          <option value="" disabled selected>Select Service</option>
+          <option value="" disabled selected>Select Service Type</option>
           <option>Wheelchair Transport</option>
           <option>Ambulatory Transport</option>
           <option>Stretcher Transport</option>
@@ -198,19 +230,18 @@ footer {
       <input type="datetime-local" name="appointment_time" required>
       <textarea name="notes" placeholder="Additional Notes"></textarea>
 
-      <button class="book-now">Submit Request</button>
+      <button type="submit" class="book-now">Book Online</button>
     </form>
   </div>
 
 </section>
 
-<!-- THANK YOU CONFIRMATION -->
-<section id="thank-you" class="thank-you">
-  <div class="thank-you-box">
+<section id="thank-you">
+  <div class="box">
     <h2>Thank You!</h2>
     <p>Your booking request has been successfully submitted.</p>
-    <p>A member of our team will contact you shortly to confirm your ride.</p>
-    <p><strong>Need immediate assistance?</strong><br>
+    <p>We will contact you shortly to confirm your ride.</p>
+    <p><strong>Need immediate help?</strong><br>
       <a href="tel:6028599819">(602) 859-9819</a>
     </p>
   </div>
